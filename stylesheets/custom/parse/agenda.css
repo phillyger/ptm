@@ -1,0 +1,222 @@
+
+
+
+#main {
+    position: relative;
+    z-index: 2;
+    border-top: 1px dotted #adadad;
+}
+
+label[for='toggle-all'] {
+    display: none;
+}
+
+
+.content ul li
+{
+
+list-style-type: none;
+
+}
+
+
+
+.agenda-role, #speaker-list, #agendaList-header {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+#agendaList-header {
+    font-weight: bold;
+}
+
+.agenda-role .spinner, #speaker-list .spinner {
+    margin: 15px auto;
+}
+
+.agenda-role, #agenda-role-general-evaluator li, #speaker-list li, #agendaList-header li {
+    text-align: left;
+    position: relative;
+    font-size: 24px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.agenda-role li:last-child, #speaker-list li:last-child {
+    border-bottom: none;
+}
+
+
+.agenda-role label, .agenda-line-item-no-time label, #speaker-list li label, #agendaList-header li label, #agenda-role-president label, #agenda-role-toastmaster label, #agenda-table-topics-master-list label, #agenda-role-general-evaluator label, #agenda-role-timer label, #agenda-role-ah-counter label, #agenda-role-grammarian label {
+    word-break: break-word;
+    margin: 15px 15px 15px 60px;
+    display: inline-block;
+    line-height: 1.2;
+    -webkit-transition: color 0.4s;
+    -moz-transition: color 0.4s;
+    -ms-transition: color 0.4s;
+    -o-transition: color 0.4s;
+    transition: color 0.4s;
+}
+
+.agenda-role li.past label, #speaker-list li.past label  {
+    color: #a9a9a9;
+    text-decoration: line-through;
+}
+
+.agenda-role label.time-content, .agenda-line-item-no-time label.time-content, #agendaList-header li label.header-user-content, #agenda-role-president label.time-content, #agenda-role-toastmaster label.time-content, #agenda-table-topics-master-list label.time-content, #agenda-role-general-evaluator label.time-content, #agenda-role-timer label.time-content, #agenda-role-ah-counter label.time-content, #agenda-role-grammarian label.time-content  {
+    width: 20%;
+}
+
+
+.agenda-role label.title-content, .agenda-line-item-no-time label.title-content, #speaker-list td:last-child, #agendaList-header li label.header-eventRoles-content, #agenda-role-president label.title-content, #agenda-role-toastmaster label.title-content, #agenda-table-topics-master-list label.title-content, #agenda-role-general-evaluator label.title-content, #agenda-role-timer label.title-content, #agenda-role-ah-counter label.title-content, #agenda-role-grammarian label.title-content {
+    width: 40%;
+}
+
+.agenda-role label.userName-content, #speaker-list td:first-child {
+    width: 10%;
+}
+
+
+#footer {
+    color: #777;
+    padding: 0 15px;
+    position: absolute;
+    right: 0;
+    bottom: -31px;
+    left: 0;
+    z-index: 1;
+    text-align: center;
+}
+
+#footer:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 31px;
+    left: 0;
+    height: 100px;
+    z-index: -1;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3),
+    0 6px 0 -3px rgba(255, 255, 255, 0.8),
+    0 7px 1px -3px rgba(0, 0, 0, 0.3),
+    0 42px 0 -6px rgba(255, 255, 255, 0.8),
+    0 43px 2px -6px rgba(0, 0, 0, 0.2);
+}
+
+#agenda-count {
+    float: left;
+    text-align: left;
+}
+
+#filters {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+#filters li {
+    display: inline;
+}
+
+#filters li a {
+    color: #83756f;
+    margin: 2px;
+    text-decoration: none;
+}
+
+#filters li a.selected {
+    font-weight: bold;
+}
+
+
+#info {
+    margin: 65px auto 0;
+    color: #a6a6a6;
+    font-size: 12px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+#info a {
+    color: inherit;
+}
+
+/*
+  Hack to remove background from Mobile Safari.
+  Can't use it globally since it destroys checkboxes in Firefox and Opera
+  */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #toggle-all,
+    .agenda-role li .toggle,
+    #speaker-list li .toggle {
+  background: none;
+    }
+}
+
+#agendaapp .content .login {
+    width: 350px;
+    margin: 45px auto 25px auto;
+}
+
+#agendaapp .content .login h2 {
+    font-weight: normal;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#agendaapp .content .login input {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 5px;
+    width: 340px;;
+}
+
+#agendaapp .content .login .signup-form {
+    margin-top: 25px;
+}
+
+#agendaapp .content .login button {
+    padding: 5px 10px;
+    background: #eee;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    font-family: "Helvetica Neue";
+}
+
+#agendaapp .content .login .error {
+    border: 1px solid red;
+    background: #FDEFF0;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+}
+
+#agendaapp .content #user-info {
+    padding: 5px 10px;
+    border-top: 1px solid #ededed;
+    margin-bottom: 0px;
+    text-align: right;
+}
+
+
+#agendaapp .content .mark-all-done {
+    margin-left: 8px;
+}
+
+#credits {
+    color: #888;
+    text-align: center;
+    padding-top: 25px;
+}
+
+#credits a {
+    color: #888;
+}
+

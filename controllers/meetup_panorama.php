@@ -8,7 +8,6 @@
 	$request_url = "https://api.meetup.com/2/events?key=".$api_key."&group_urlname=".$group_name."&page=1"."&sign=true";
 
 
-
 	// standard curl
 	$ch = curl_init();
 	$timeout = 5;

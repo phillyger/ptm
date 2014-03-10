@@ -6,10 +6,10 @@ $(function() {
 		// first hide any error messages
     $('.error').hide();
 		
-	  var name = $("input#name").val();
-		if (name == "") {
-      $("label#name_error").show();
-      $("input#name").focus();
+	  var displayName = $("input#displayName").val();
+		if (displayName == "") {
+      $("label#displayName_error").show();
+      $("input#displayName").focus();
       return false;
     }
 		var email = $("input#email").val();
@@ -30,7 +30,7 @@ $(function() {
       $("input#message").focus();
       return false;
     }
-		var dataString = 'name='+ name + '&email=' + email + '&subject=' + subject+'&message=' + message;
+		var dataString = 'displayName='+ displayName + '&email=' + email + '&subject=' + subject+'&message=' + message;
 		//alert (dataString);return false;
 		
 		$.ajax({

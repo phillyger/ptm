@@ -12,6 +12,17 @@
     }
   ?>
 
+<!-- container -->
+  <div class="container">
+    <div class="container-overlap home">
 
+	<a href="/pdf/Certificate.pdf">Click to Download PDF</a>
+
+      
+    </div>  <!-- container-overlap -->
+
+
+
+  </div><!-- container -->
 
 <?php include('includes/footer.php'); ?>

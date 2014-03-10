@@ -3,9 +3,9 @@
 
     $dir_path = dirname(__FILE__);
 
-    include($dir_path.'/includes/header.php'); 
+    include('./includes/header.php'); 
 
-    $meetup_controller_file = $dir_path.'/controllers/meetup_panorama.php';
+    $meetup_controller_file = './controllers/meetup_panorama.php';
 
 
     if (file_exists($meetup_controller_file))
@@ -26,12 +26,12 @@
         <div class="twelve columns">
           <div class="alert-box">
              <a href="" class="close">&times;</a>
-             Latest News: New Panorama Toastmaster Membership Contest! Click <a href="/contest.php" style="color:white; text-decoration: underline;">here</a> to view.
+             Latest News: Stop by our next meeting at The Watermark.
           </div>
           <div id="introBanner" class="orbit">        
             <div id="item1" class="banner-slide orbit-slide">
               <h3>Our Mission</h3>
-              <p>The mission of <strong>Panorama Toastmasters</strong> club is to provide a mutually supportive and positive learning environment in which every individual member has the opportunity to develop oral communication and leadership skills, which in turn foster self-confidence and personal growth.</p>
+              <p>The mission of <strong>Panorama Toastmasters</strong> club is to provide a supportive and positive learning experience in which members are empowered to develop communication and leadership skills, resulting in greater self-confidence and personal growth</p>
               <img alt="Slide-1" src="/images/notable/slide-1.png">
             </div>
       
@@ -140,7 +140,7 @@
         <ul class="nice tabs-content">
           <li class="active" id="nice1Tab">
               <p><strong class="">Our Mission</strong></p>
-           <p>The mission of <strong>Panorama Toastmasters</strong> club is to provide a mutually supportive and positive learning environment in which every individual member has the opportunity to develop oral communication and leadership skills, which in turn foster self-confidence and personal growth.</p>
+           <p>The mission of <strong>Panorama Toastmasters</strong> club is to provide a supportive and positive learning experience in which members are empowered to develop communication and leadership skills, resulting in greater self-confidence and personal growth.</p>
             </li>
           <li id="nice2Tab">
             <p><strong>Our Promise</strong></p>
@@ -205,6 +205,67 @@
        <div class="ptm-divider"></div>
      </div>
     </div>
+
+
+<div class="row">
+     <div class="twelve columns" >
+      <h3 class="light ">Public Speaking Goes Mobile -  Helping You Measure Your Progress</h3>
+     </div>
+
+     <div class="four columns">
+
+      <h4 class="subheader">A Fresh Way to Look at Public Speaking - PoMoFeLo</h4>
+
+      <p>A <strong><u>Po</u></strong>sitive <strong><u>Mo</u></strong>tivational <strong><u>Fe</u></strong>edback <strong><u>Lo</u></strong>op is a termed coined by Panorama to describe this startlingly 
+        new approach to improving one's public speaking skills.</p>
+      
+      <blockquote>Anything worth doing, is worth doing right.<cite>Hunter S. Thompson</cite></blockquote>
+      
+      <p>Acquiring a new skill requires effort. Effort is demonstrated through grit and dedication. Grit is a trait based on an individual’s passion 
+        for a particular long-term goal or end state coupled with a powerful motivation to achieve their respective objective.</p>
+
+       <p>There is no 'magic pill' that one can take to turn someone into a great speaker overnight. It can only be achieved through continued practice.
+         </p>
+
+      <p>As a club, our goal is to help in any-and-all ways possible. One approach that sets our club apart from others is this idea of a <strong>PoMoFeLo</strong>. </p>
+
+      
+
+     </div>
+     <div class="four columns">
+        <img src="/images/e1h/e1h_member_attendance_full.png"/>
+     </div>
+     <div class="four columns">
+      <h4 class="subheader">PoMoFeLo - Explained</h4>
+      <blockquote>If you can not measure it, you can not improve it.<cite>Lord Kelvin</cite></blockquote>
+        <p>We want to enable you to succeed on your public speaking journey by allowing you to track your progress through the use of technology.</p>
+        
+        <p>By placing this information into your hands, we are transforming the art of oratory. <strong>We are putting the word 'social' back into 'social networks'.</strong>
+
+          <p>
+
+            <ul class="circle">
+              <li>Imagine having access to view your progress on your smartphone, tablet or web.</li>
+              <li>Imagine having video of all your speeches available to view on your phone.</li>
+              <li>Imagine having the ability to schedule future speeches.</li>
+              <li>Imagine having project speech information accessible at a click.</li>
+              <li>Imagine receiving notifications of updated agendas, open roles and meeting reminders directly to your phone or tablet.</li>
+             <ul> 
+          </p>
+
+
+          <p>Join us on this new revolution. Click <a href="/pomofelo.php">here to find out more.</a></p>
+     </div>
+</div>
+
+
+
+    <div class="row">
+     <div class="twelve columns">
+       <div class="ptm-divider"></div>
+     </div>
+    </div>
+
     
 
       <div class="row">

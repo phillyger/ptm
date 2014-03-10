@@ -7,6 +7,10 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="/javascripts/custom/parse/underscore-1.1.6.js"></script>
+  <script src="//www.parsecdn.com/js/parse-1.2.9.min.js"></script>
+  <script src="/javascripts/custom/parse/agenda.js"></script>
 
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width" />
@@ -26,6 +30,9 @@
 	<meta http-equiv="Content-Style-Type" content="text/css">
 	<meta http-equiv="Content-Script-Type" content="text/javascript">
 	<meta http-equiv="imagetoolbar" content="no">
+
+
+
 
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -53,9 +60,12 @@
 	  <!-- Included CSS Files, use foundation.css if you do not want minified code -->
   <link rel="stylesheet" href="/stylesheets/foundation.min.css">
   <link rel="stylesheet" href="/stylesheets/app.css">
+  <link rel="stylesheet" href="/stylesheets/custom/parse/agenda.css">
 
   <!-- Custom Modernizr for Foundation -->
   <script src="/javascripts/modernizr.foundation.js"></script>
+
+
 
 
 </head>

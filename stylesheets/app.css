@@ -466,7 +466,7 @@ form {
 label {
   font-size: 14px;
   color: #4d4d4d;
-  cursor: pointer;
+  cursor: default;
   display: block;
   font-weight: 500;
   margin-bottom: 3px;

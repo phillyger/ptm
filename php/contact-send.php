@@ -1,7 +1,7 @@
 <?php
-if ((isset($_POST['name'])) && (strlen(trim($_POST['name'])) > 0)) {
-	$name = stripslashes(strip_tags($_POST['name']));
-} else {$name = 'No name entered';}
+if ((isset($_POST['displayName'])) && (strlen(trim($_POST['displayName'])) > 0)) {
+	$displayName = stripslashes(strip_tags($_POST['displayName']));
+} else {$displayName = 'No name entered';}
 if ((isset($_POST['email'])) && (strlen(trim($_POST['email'])) > 0)) {
 	$email = stripslashes(strip_tags($_POST['email']));
 } else {$email = 'No email entered';}
@@ -22,7 +22,7 @@ ob_start();
 <table width="550" border="1" cellspacing="2" cellpadding="2">
   <tr bgcolor="#eeffee">
     <td>Name</td>
-    <td><?php echo $name;?></td>
+    <td><?php echo $displayName;?></td>
   </tr>
   <tr bgcolor="#eeeeff">
     <td>Email</td>
@@ -48,13 +48,12 @@ require_once 'config.php';
 
 $sgusername = 'panoramatoastmasters';
 $sgpassword = 'Watermark4';
-// $sgusername = 'brilliantage';
-// $sgpassword = 'ZAUgngXF';
+
 $sendgrid = new SendGrid($sgusername, $sgpassword);
 date_default_timezone_set('America/New_York');
 
 // Ensures no one loads page and does simple spam check
-if( isset($_POST['name']) && empty($_POST['spam-check']) ) {
+if( isset($_POST['displayName']) && empty($_POST['spam-check']) ) {
   
   // Declare our $errors variable we will be using later to store any errors
   $error = '';
@@ -62,12 +61,15 @@ if( isset($_POST['name']) && empty($_POST['spam-check']) ) {
 
   // Now check to see if there are any errors 
   if( !$error ) {
+
+    $extended_message  = 'Sent By: ' . $displayName . '  -  '. $message;
+
     $mail = new SendGrid\Mail();
     $mail->addTo($your_email_address)->
            setFrom($email)->
            setSubject($subject)->
-           setText($message)->
-           setHtml($message);
+           setText($extended_message)->
+           setHtml($extended_message)->addUniqueArgument("Sent By", $displayName);
     
     // No errors, send mail using conditional to ensure it was sent
     //mail($your_email_address, $subject, $message, "From: $input_email")
@@ -80,7 +82,7 @@ if( isset($_POST['name']) && empty($_POST['spam-check']) ) {
   } else {
     
     // Errors were found, output all errors to the user
-    $response = (isset($error['name'])) ? $error['name'] . "<br /> \n" : null;
+    $response = (isset($error['displayName'])) ? $error['displayName'] . "<br /> \n" : null;
     $response .= (isset($error['email'])) ? $error['email'] . "<br /> \n" : null;
     $response .= (isset($error['message'])) ? $error['message'] . "<br /> \n" : null;
 

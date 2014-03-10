@@ -1,0 +1,32 @@
+{"results":
+    [
+      {
+         "month":"Jan",
+         "litres":"7,920",
+         "grossValue":"34.02",
+         "bonus":"0,40",
+         "vat":"1.59"
+      },
+      {
+         "month":"Feb",
+         "litres":"14,189",
+         "grossValue":"030.89",
+         "bonus":"0,40",
+         "vat":"1.45"
+      },
+      {
+         "month":"Mar",
+         "litres":"29,662",
+         "grossValue":"33.48",
+         "bonus":"0,40",
+         "vat":"1.62"
+      },
+      {
+         "month":"Apr",
+         "litres":"33,553",
+         "grossValue":"34.07",
+         "bonus":"0.20",
+         "vat":"1.65"
+      }
+    ]
+}

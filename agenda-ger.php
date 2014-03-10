@@ -24,8 +24,8 @@
       </div>
     </div>
 
-     <div id="credits">
-      Powered by <a href="http://www.brilliantage.com">Every1Here mobile application</a> created by <a href="http://www.brilliantage.com">Brilliant Age</a>
+    <div id="credits">
+      Powered by <a href="https://www.parse.com">Parse</a> using the <a href="https://www.parse.com/docs/js_guide">JavaScript SDK</a>
     </div>
 
     <!-- Templates -->
@@ -53,7 +53,7 @@
        <div class="row">
           <ul>
             <li>
-              <div id="agenda-role-president">
+              <div class="agenda-role">
                 
                 <label class="time-content">7:30 PM</label>
                 <label class="title-content"><strong>President Calls Meeting to Order</strong></label>
@@ -69,20 +69,15 @@
                 
                 <label class="time-content">7:35 PM</label>
                 <label class="title-content"><strong>President Introduces the Toastmaster</strong></label>
-                <label class="userName-content"></label>
+                <label class="theme-content"></label>
 
               </div>
             </li>
-            <li>
-              <div id="agenda-role-toastmaster">
-    
-                <label class="time-content"></label>
-                <label class="title-content">Toastmaster of the day</label>
-                <label class="userName-content"><a href="mailto:vped-9669@toastmastersclubs.org?subject=Accept Toastmaster Role"><span class="success alert round label">Open Role</span></a></label>
+          </ul>
 
-              </div>
-            </li>
+          <ul id="agenda-toastmaster-list"></ul>
 
+          <ul>
             <li>
               <div class="agenda-role">
                 
@@ -109,7 +104,7 @@
           
                 <label class="time-content"></label>
                 <label class="title-content">General Evaluator</label>
-                <label class="userName-content"><a href="mailto:vped-9669@toastmastersclubs.org?subject=Accept General Evaluator Role"><span class="success alert round label">Open Role</span></a></label>
+                <label class="userName-content">TBD</label>
 
               </div>
             </li>
@@ -118,7 +113,7 @@
           
                 <label class="time-content"></label>
                 <label class="title-content">Timer</label>
-                <label class="userName-content"><a href="mailto:vped-9669@toastmastersclubs.org?subject=Accept Timer Role"><span class="success alert round label">Open Role</span></a></label>
+                <label class="userName-content">TBD</label>
 
               </div>
             </li>
@@ -128,7 +123,7 @@
           
                 <label class="time-content"></label>
                 <label class="title-content">Ah-Counter</label>
-                <label class="userName-content"><a href="mailto:vped-9669@toastmastersclubs.org?subject=Accept Ah-Counter Role"><span class="success alert round label">Open Role</span></a></label>
+                <label class="userName-content">TBD</label>
 
               </div>
             </li>
@@ -138,7 +133,7 @@
           
                 <label class="time-content"></label>
                 <label class="title-content">Grammarian</label>
-                <label class="userName-content"><a href="mailto:vped-9669@toastmastersclubs.org?subject=Accept Grammarian Role"><span class="success alert round label">Open Role</span></a></label>
+                <label class="userName-content">TBD</label>
 
               </div>
             </li>
@@ -177,7 +172,7 @@
                   </td>
                    <td>
                       <h6>
-                        <a href="mailto:vped-9669@toastmastersclubs.org?subject=Accept Speaker Role"><span class="success alert round label">Open Role</span></a>
+                        TBD
                       </h6>
                   </td>
                 </tr> 
@@ -262,7 +257,7 @@
                   </td>
                    <td>
                       <h6>
-                         <a href="mailto:vped-9669@toastmastersclubs.org?subject=Accept Speaker Role"><span class="success alert round label">Open Role</span></a>
+                        TBD
                       </h6>
                   </td>
                 </tr> 
@@ -347,7 +342,7 @@
                   </td>
                    <td>
                       <h6>
-                         <a href="mailto:vped-9669@toastmastersclubs.org?subject=Accept Speaker Role"><span class="success alert round label">Open Role</span></a>
+                        TBD
                       </h6>
                   </td>
                 </tr> 
@@ -428,31 +423,9 @@
 
               </div>
             </li>
-
-            <li>
-              <div id="agenda-table-topics-master-list">
-    
-                <label class="time-content"></label>
-                <label class="title-content">Conduct Table Topics Session</label>
-                <label class="userName-content"><a href="mailto:vped-9669@toastmastersclubs.org?subject=Accept Table Topics Role"><span class="success alert round label">Open Role</span></a></label>
-
-              </div>
-            </li>
-
-
-            <li>
-              <div class="agenda-line-item-no-time">
-                
-                <label class="time-content"></label>
-                <label class="title-content">Returns control to the Toastmaster</label>
-                <label class="theme-content"></label>
-
-              </div>
-            </li>
-
           </ul>
 
-
+          <ul id="agenda-table-topics-master-list"></ul>
 
           <ul>
             <li>
@@ -460,43 +433,43 @@
                 
                 <label class="time-content">8:30 PM</label>
                 <label class="title-content"><strong>Toastmaster Introduces the General Evaluator</strong></label>
-                <label class="tuserName-content"></label>
+                <label class="theme-content"></label>
 
               </div>
             </li>
 
             <li>
-              <div class="agenda-line-item-no-time">
+              <div class="agenda-role">
                 
                 <label class="time-content"></label>
                 <label class="title-content">General Evaluator calls for reports</label>
-                <label class="userName-content"></label>
+                <label class="theme-content"></label>
 
               </div>
             </li>
 
             <li>
-              <div class="agenda-line-item-no-time">
+              <div class="agenda-role">
                 
                 <label class="time-content"></label>
                 <label class="title-content">Timer</label>
-                <label class="userName-content"></label>
+                <label class="theme-content"></label>
 
               </div>
             </li>
 
             <li>
-              <div class="agenda-line-item-no-time">
+              <div class="agenda-role">
                 
                 <label class="time-content"></label>
                 <label class="title-content">Ah-Counter</label>
-                <label class="userName-content"></label>
+                <label class="theme-content"></label>
 
               </div>
             </li>
     
             <li>
-              <div class="agenda-line-item-no-time">
+              <div class="agenda-role">
                 
                 <label class="time-content"></label>
                 <label class="title-content">Grammarian</label>
@@ -507,7 +480,7 @@
 
 
             <li>
-              <div class="agenda-line-item-no-time">
+              <div class="agenda-role">
                 
                 <label class="time-content"></label>
                 <label class="title-content">General Evaluator provides meeting & leader evaluations</label>
@@ -517,7 +490,7 @@
             </li>
 
             <li>
-             <div class="agenda-line-item-no-time">
+              <div class="agenda-role">
                 
                 <label class="time-content"></label>
                 <label class="title-content">Returns control to the Toastmaster</label>
@@ -650,7 +623,13 @@
 
     <script type="text/template" id="item-toastmaster-template">
 
-        <%= username %>
+        <div class="agenda-role">
+          
+          <label class="time-content"></label>
+          <label class="title-content">Toastmaster of the Day</label>
+          <label class="userName-content"><%= username %></label>
+
+        </div>
 
     </script>
 
@@ -659,7 +638,13 @@
 
     <script type="text/template" id="item-tableTopicsMaster-template">
 
-        <%= username %>
+        <div class="agenda-role">
+          
+          <label class="time-content"></label>
+          <label class="title-content">Conduct Table Topics Session</label>
+          <label class="userName-content"><%= username %></label>
+
+        </div>
 
     </script>
 
@@ -672,7 +657,7 @@
 
     <script type="text/template" id="item-grammarian-template">
 
-        <%= username %>
+            <%= username %>
 
     </script>
     

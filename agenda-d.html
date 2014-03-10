@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="/javascripts/custom/parse/underscore-1.1.6.js"></script>
+  <script src="//www.parsecdn.com/js/parse-1.2.9.min.js"></script>
+  <script src="/javascripts/custom/parse/agenda.js"></script>
+</head>
+<body>
+
+
+ <!-- container -->
+  <div class="container">
+    <div class="container-overlap">
+      <div class="row">
+        <div class="one columns centered">
+          <h1>Agenda</h1>    
+        </div>
+        <div class="seven columns centered">
+            <p><?php $convert_utc_date= date(DATE_W3C, $curEvt["time"]/1000);
+              echo date('l\, jS \of F h:i A', strtotime($convert_utc_date)) ?></p>
+        </div>
+
+      </div>  <!-- row -->
+
+      <table class="twelve">
+
+      <!-- To DO: Hardcoded content. Find a way to make this row show up dynamically -->
+        <tr>
+          <td>
+            7:30 PM
+          </td>
+          <td>
+                President Calls Meeting to Order
+          </td>
+          <td>
+              Ger O'Sullivan
+           </td>
+        </tr>
+
+
+     
+
+        <!-- Next Section -->
+
+        <tr>
+          <td>
+            7:40 PM
+          </td>
+          <td>
+                Toastmaster Introduces:- 
+          </td>
+          <td>
+                
+           </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            8:00 PM
+          </td>
+          <td>
+            Toastmaster Introduces Evaluators &amp; Speakers
+          </td>
+          <td>
+          </td>
+        </tr> 
+
+      </table>
+
+    <div id="agenda-toastmaster-list"></div>
+
+      <!-- Table Topics --> 
+      <table class="twelve">
+
+        <tr>
+          <td>
+          </td>
+          <td>
+            Timer, Ah-Counter, Grammarian, General Evaluator provides meeting &amp; leader evaluations
+          </td>
+          <td>
+            &nbsp;
+          </td>
+        </tr>
+        <tr>
+          <td>
+            9:00 PM
+          </td>
+          <td>
+            President Makes Closing Remarks. Welcomes Guests, and Meeting Adjourns
+          </td>
+          <td>
+            Ger O'Sullivan
+          </td>
+        </tr>
+      </table>
+
+     </div> <!-- container-overlap -->
+    </div>  <!-- container -->
+
+
+
+    <script type="text/template" id="item-toastmaster-template">
+
+           <%= username %>
+
+
+    </script>
+
+<!--
+
+    <script type="text/template" id="item-generalEvaluator-template">
+          <td>
+          </td>
+          <td>
+            General Evaluator
+          </td>
+          <td>
+            <%= username %>
+          </td>
+    </script>
+
+
+    <script type="text/template" id="item-ahCounter-template">
+
+          <td>
+          </td>
+          <td>
+            Ah-Counter
+          </td>
+          <td>
+            <%= username %>
+          </td>
+
+    </script>
+
+
+
+    <script type="text/template" id="item-grammarian-template">
+
+          <td>
+          </td>
+          <td>
+            Grammarian
+          </td>
+          <td>
+            <%= username %>
+          </td>
+
+    </script>
+
+    <script type="text/template" id="item-timer-template">
+
+          <td>
+          </td>
+          <td>
+            Timer
+          </td>
+          <td>
+            <%= username %>
+          </td>
+
+    </script>
+
+    <script type="text/template" id="item-tableTopicsMaster-template">
+
+          <td>
+            8:30 PM
+          </td>
+          <td>
+                Toastmaster Introduces Table Topics Master
+          </td>
+          <td>
+              <%= username %>       
+           </td>
+
+    </script>
+
+
+     <script type="text/template" id="item-speakerTemplate">
+
+      <tr>
+        <td >
+          Speaker:
+        </td>
+         <td>
+            <h6>
+              <%= username %>
+            </h6>
+        </td>
+      </tr> 
+
+      <tr>
+        <td >
+          Speech Number:
+        </td>
+         <td>
+            <h6>
+             <%= speechInfo.projectNum %>.  <%= speechInfo.projectTitle %>
+            </h6>
+        </td>
+      </tr> 
+
+      <tr>
+        <td>
+          Title:
+        </td>
+         <td>
+            <h6>
+              <%= speechInfo.speechTitle %>
+            </h6>
+        </td>
+      </tr> 
+
+      <tr>
+        <td>
+          Summary:
+        </td>
+         <td>
+            <%= speechInfo.summary %>
+        </td>
+      </tr> 
+
+      <tr>
+        <td>
+          Objectives:
+        </td>
+         <td>
+            <% speechInfo.objectives.forEach(function (item) { %>
+                 <%= item %> <br/>
+            <% }); %>
+        </td>
+      </tr> 
+
+      <tr>
+        <td>
+          Time:
+        </td>
+         <td>
+             <%= speechInfo.speechLength %>
+        </td>
+      </tr> 
+
+        <tr>
+        <td>
+          Evaluator
+        </td>
+        <td>
+            <%= speechInfo.evaluatorName %>
+        </td>
+      </tr>
+
+
+    </script>
+-->
+
+
+</body>
+</html>
+

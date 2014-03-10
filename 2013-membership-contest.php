@@ -5,17 +5,9 @@
 
     include($dir_path.'/includes/header.php');
 
-    $meetup_controller_file = $dir_path.'/controllers/meetup_panorama.php';
 
-
-    if (file_exists($meetup_controller_file))
-    {
-      // echo $meetup_controller_file;
-     include($meetup_controller_file); 
-    }
 
   ?>
-
 
  <!-- container -->
   <div class="container">
@@ -64,6 +56,13 @@
             </div>
           </div>
 
+         <div class="eight columns">
+             
+                <div class="flex-video widescreen">
+          <iframe width="560" height="315" src="http://www.youtube.com/embed/Y7Lb0Zrqkak" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div> <!-- end eight columns-->
+        
           <div class="row">
             <div class="twelve columns">
                <h5>Objective</h5>
@@ -183,7 +182,7 @@
 <?php include($dir_path .'/includes/foundation.js.php'); ?>
   <!-- top menu selector --> 
   <script src="/javascripts/custom/top.level.menu.selector.js"></script>
-  <script src="javascripts/custom/contact.form.js"></script>
+  <script src="/javascripts/custom/contact.form.js"></script>
 
 </body>
 </html>

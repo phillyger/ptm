@@ -45,24 +45,24 @@
 
                     <!-- Last Name -->
                      <label>Name</label>
-                      <input id="name" name="name" type="text"></input>
-                      <label class="error" for="name" id="name_error">This field is required.</label>
+                      <input id="displayName" name="displayName" type="text"></input>
+                      <label class="error" for="displayName" id="displayName_error">This field is required.</label>
 
                     <!-- Email Address -->
                       <label>Email Address</label>
                       <input id="email" name="email" type="email"></input>
-                      <label class="error" for="name" id="email_error">This field is required.</label>
+                      <label class="error" for="email" id="email_error">This field is required.</label>
 
                     <!-- Email Address -->
                       <label>Subject</label>
                       <input id="subject" name="subject" type="text"></input>
-                      <label class="error" for="name" id="subject_error">This field is required.</label>
+                      <label class="error" for="subject" id="subject_error">This field is required.</label>
 
 
                     <!-- Comments -->
                       <label>Comments</label>
                       <textarea id="message" name="message" rows="10"></textarea>
-                      <label class="error" for="name" id="message_error">This field is required.</label>
+                      <label class="error" for="message" id="message_error">This field is required.</label>
 
                       <div style="display:none">
                         <label for="contact-spam-check">Do not fill out this field:</label>
