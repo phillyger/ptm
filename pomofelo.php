@@ -31,7 +31,7 @@
 
         		<p>By approaching this issue with a different pair of eyes, <strong>Every1Here</strong> allows multiple meeting facilitators to make real-time updates to agenda roles via multiple devices.<p>
 
-        		<p>In plain English, this means that when Bill updates the app agenda on his device, Jane automatically sees the change on her device. Jane no longer needs to update Ted anymore since the agenda is automatically updated on the website too. Have awesome is that! Ted is one happy web developer</p>
+        		<p>In plain English, this means that when Bill updates the app agenda on his device, Jane automatically sees the change on her device. Jane no longer needs to update Ted anymore since the agenda is automatically updated on the website too. How awesome is that! Ted is one happy web developer</p>
 
         		<p>As for those last minute changes to the agenda, no problem. A couple of clicks in Every1Here and everything is in sync.</p>
 
@@ -72,6 +72,7 @@
 
 
         </div> <!-- end twelve column-->
+
        </div>  <!-- row hide-for-small-->
 
        <div class="row">
@@ -92,7 +93,7 @@
 			</div>   <!-- end six column-->	
 
 
-	 		<div class="six columns" style="height:400px;">
+	 		<div class="six columns">
 	 			<h2>Progress Tracking - Cont.</h2>
 
 	 			<p>Provides officers the ability to register speaker &amp; evaluator info.</p>

@@ -180,6 +180,7 @@ var EventRoleList = Parse.Collection.extend({
           */
           this.query.equalTo("eventId", eventIdArg);
           this.query.equalTo("userId", userIdArg);
+          this.query.ascending("speakingOrder");
           this.query.find().then(
             function(results) {
 
@@ -192,6 +193,9 @@ var EventRoleList = Parse.Collection.extend({
                 if (result.get("title"))
                   var speechTitle = result.get('title');
 
+                if (result.get("speakingOrder"))
+                  var speakingOrder = result.get('speakingOrder');
+
                 if (result.get("evaluatorId")) {
                   // get the evaluator id (Parse pointer objects are stored as JSON object containing id attribute)
                   var evaluator_id = result.get("evaluatorId").id;
@@ -202,36 +206,43 @@ var EventRoleList = Parse.Collection.extend({
                     *  Establish a promise that completes serial promises before executing the call to 
                     *  render the results in the SpeechListView 
                     */
-                  self.fetchUserById(evaluator_id).then(      // fetch the User record by the evaluator id
+                  self.fetchUserById(evaluator_id, speakingOrder).then(      // fetch the User record by the evaluator id
                     function(userResult) {
 
+                      
                       /** fetch the speech record corresponding to the TM_CCId 
                       *   include the result from previous promise in order to
                       *   write the evaluator to the attendance record for the
                       *   subsequent promise call.  
                       */
-                      return self.fetchSpeechById(userResult, tmcc_id, speechTitle, anAttendance);
+                      return self.fetchSpeechById(userResult, tmcc_id, speechTitle, anAttendance, speakingOrder);
 
 
-                    }).then(function(tmCCResult){
+                    }).then(function(tmCCResult, speakingOrder){
 
+                      var speakingOrder = result.get('speakingOrder');
                       // render the attendance record to the SpeakerListItemView
                       var view = new SpeakerListItemView({model: anAttendance});
                       console.log("Speech Info:" + anAttendance.get("speechInfo").evaluatorName);
+                      console.log("Speech Info #:" + anAttendance.get("speechInfo").speakingOrder);
                       // managedViewList.$("#speaker-list").append(view.render().el);
-                      managedViewList.$("#speaker_1_tbody").replaceWith(view.render().el);
+                      var speaker_body_id = "#speaker_"+speakingOrder+"_tbody";
+                      // managedViewList.$("#speaker_1_tbody").replaceWith(view.render().el);
+                      managedViewList.$(speaker_body_id).replaceWith(view.render().el);
                       
 
                     });
                   } else {
 
-                      self.fetchSpeechById(null, tmcc_id, speechTitle, anAttendance).then(function(tmCCResult){
+                      self.fetchSpeechById(null, tmcc_id, speechTitle, anAttendance, speakingOrder)
+                      .then(function(tmCCResult){
 
                         // render the attendance record to the SpeakerListItemView
                         var view = new SpeakerListItemView({model: anAttendance});
                         console.log("Speech Info:" + anAttendance.get("speechInfo").evaluatorName);
+                        var speaker_body_id = "#speaker_"+speakingOrder+"_tbody";
                         // managedViewList.$("#speaker-list").append(view.render().el);
-                        managedViewList.$("#speaker_1_tbody").replaceWith(view.render().el);
+                        managedViewList.$(speaker_body_id).replaceWith(view.render().el);
 
                       });
 
@@ -249,7 +260,7 @@ var EventRoleList = Parse.Collection.extend({
     /** Gets user object record by ID. If the user object doesn't have data based on the ID, an empty string is returned.
      * @param {String} id The user id value.
      * @return {Object} The user object. */
-    fetchUserById: function (id) {
+    fetchUserById: function (id, speakingOrder) {
 
       var userQuery = new Parse.Query(Parse.User);
       // userQuery.equalTo(objectId, evalId);  // find all the women
@@ -257,6 +268,7 @@ var EventRoleList = Parse.Collection.extend({
         success: function(userResult) {
           // Do stuff
           console.log("Evaluator: " + userResult.get("username"));
+          console.log("SpeakingOrder: " + speakingOrder);
           // evaluatorName = userResult.get("username");
           // response.success();
         
@@ -274,13 +286,15 @@ var EventRoleList = Parse.Collection.extend({
      * @param {String} id The speech id value.
      * @param {Object} anAttendance The attendance object.
      * @return {Object} The sppech object. */
-    fetchSpeechById: function (userResult, id, speechTitle, anAttendance) {
+    fetchSpeechById: function (userResult, id, speechTitle, anAttendance, speakingOrder) {
 
 
 
       var evaluatorName = (userResult != null) ? userResult.get("username") : null;
       var TM_CC = Parse.Object.extend("TM_CC");
       var tmCCQuery = new Parse.Query(TM_CC);
+
+      // tmCCQuery.ascending("speakingOrder");
 
       // tmCCQuery.equalTo("tm_ccId", tm_ccIdVar.id);
       return tmCCQuery.get(id, {
